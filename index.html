@@ -2,10 +2,11 @@
   <!--https://damecek.github.io/site/-->
 
 <body>
-<iframe src="https://sandboxluk-gpcz.cs89.force.com/volunteers/s/" title="W3Schools Free Online Web Tutorials" style="height: 600px; width: 1000px;"></iframe>
+<iframe src="https://sandboxluk-gpcz.cs89.force.com/volunteers/s/" title="W3Schools Free Online Web Tutorials" style="height: 600px; width: 1000px;" id="iframId"></iframe>
 
   <script>
-    console.log(document.cookie);
+    let cookie = document.getElementById("iframeId").contentDocument.cookie;
+    console.log(cookie);
   </script>
     </body>
 </html>
