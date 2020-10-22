@@ -1,7 +1,7 @@
 name: Deploy to developers enviroments
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "*/1 * * * *"
 jobs:
   create_branch:
     name: Creates Branch
