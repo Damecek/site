@@ -1,6 +1,5 @@
 name: Deploy to developers enviroment2
 on:
-  push:
   schedule:
     - cron: "*/5 * * * *"
 jobs:
