@@ -1,8 +1,7 @@
 name: Deploy to developers enviroment2
 on:
-  push:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "* * * * *"
 jobs:
   create_branch:
     name: Creates Branch
