@@ -1,4 +1,4 @@
-name: Do things every 5 minutes
+name: Deploy to developers enviroment
 on:
   schedule:
     - cron: "*/5 * * * *"
