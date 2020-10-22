@@ -1,0 +1,20 @@
+name: Deploy to developers enviroments
+on:
+  schedule:
+    - cron: "0 0 * * *"
+jobs:
+  create_branch:
+    name: Creates Branch
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@master
+
+      - name: Merge DEV -> adam DEV
+        uses: devmasx/merge-branch@v1.3.0
+        with:
+          type: now
+          from_branch: master
+          head_to_merge: master
+          target_branch: Damecek-patch-1
+          github_token: ${{ secrets.GITHUB_TOKEN }}
