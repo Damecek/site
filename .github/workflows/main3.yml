@@ -6,27 +6,27 @@ jobs:
   create_branch:
     name: Creates Branch
     runs-on: ubuntu-latest
-    env: 
-      JEDNA: v create
-    defaults:
-      run: |
+    steps:
+      - env: 
+          JEDNA: v create
+        run: |
           echo $JEDNA.
   move_to_travis:
     name: do something in travis
     runs-on: ubuntu-latest
     needs: [create_branch]
-    env: 
-      DVA: v travisu
-    defaults:
-      run: |
-          echo $DVA.
+    steps:
+      - env: 
+          DVA: v travisu
+        run: |
+            echo $DVA.
   delete_branch:
     name: Deletes The Branch
     runs-on: ubuntu-latest
     needs: [create_branch, move_to_travis]
-    env: 
-      TRI: v delete
-    defaults:
-      run: |
-          echo $TRI.
+    steps:
+      - env:  
+          TRI: v delete
+        run: |
+            echo $TRI.
   
