@@ -16,6 +16,7 @@ jobs:
         with:
           type: now
           from_branch: master
+          head_to_merge: master
           target_branch: Damecek-patch-1
           github_token: ${{ secrets.GITHUB_TOKEN }}
   
